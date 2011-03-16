@@ -6,3 +6,9 @@ feel that this will lead the way towards abstracting out Signals-based component
 I'm doing this because I have found myself recreating portions of MinimalComps and don't want to reinvent a very well-established wheel, but still want to code according to my own standards in a particular project.
 
 I would also love to see someone add skinnable functionality to these components (or to create skinnable implementations of established component interfaces!) but I don't imagine I'll get around to that unless my personal projects make me filthy amounts of money. (They probably won't).
+
+So Far:
+
+• CheckBox has a changed signal and a default selected option
+• RadioButton has a changed signal
+• RadioButtonGroup facilitates grouping of radio buttons (a group is now required for default functionality)
