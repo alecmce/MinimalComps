@@ -1,0 +1,1 @@
+I'm hacking the hell out of each MinimalComps just when I need it, so that it exposes a signal rather than requiring a listener function. Anyway, all that is explained in greater detail over on my signals branch, so go take a look at that if you're interested.
