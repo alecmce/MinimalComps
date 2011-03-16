@@ -42,16 +42,17 @@ package com.bit101.components
 		private var _back:Sprite;
 		private var _button:Sprite;
 		private var _label:Label;
-		private var _labelText:String = "";
-		private var _selected:Boolean = false;
+		private var _labelText:String;
+		private var _selected:Boolean;
 
 		private var _changed:Signal;
 
-		public function CheckBox(parent:DisplayObjectContainer = null, xpos:Number = 0, ypos:Number = 0, label:String = "")
+		public function CheckBox(parent:DisplayObjectContainer = null, xpos:Number = 0, ypos:Number = 0, label:String = "", selected:Boolean = false)
 		{
-			_changed = new Signal(Boolean);
+			_changed = new Signal(CheckBox, Boolean);
 			
-			_labelText = label;
+			_labelText = label || "";
+			_selected = selected;
 			super(parent, xpos, ypos);
 		}
 		
@@ -116,7 +117,7 @@ package com.bit101.components
 			return _labelText;
 		}
 
-		[Bindable( "change" )]
+		[Bindable("change")]
 		public function set selected(value:Boolean):void
 		{
 			if (_selected == value)
@@ -124,7 +125,7 @@ package com.bit101.components
 
 			_selected = value;
 			_button.visible = _selected;
-			_changed.dispatch(value);
+			_changed.dispatch(this, value);
 		}
 
 		public function get selected():Boolean
