@@ -1,0 +1,8 @@
+My fork of MinimalComps is intended to port the components over to my preferred structure.
+
+I dislike the use of writing in a default function up-front, preferring to expose a signal. This forces an extra line per-component, but I
+feel that this will lead the way towards abstracting out Signals-based component interfaces and moving the entire minimal comps structure behind an interface.
+
+I'm doing this because I have found myself recreating portions of MinimalComps and don't want to reinvent a very well-established wheel, but still want to code according to my own standards in a particular project.
+
+I would also love to see someone add skinnable functionality to these components (or to create skinnable implementations of established component interfaces!) but I don't imagine I'll get around to that unless my personal projects make me filthy amounts of money. (They probably won't).
